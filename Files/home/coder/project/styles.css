@@ -1,0 +1,116 @@
+body{
+    background-color:rgb(205, 193, 193);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1{
+    font-size: 2rem;
+
+}
+
+h2{
+    font-size: 2rem;
+}
+
+header > img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav ul{
+    padding:0.5rem;
+    list-style: none;
+    text-align: center;
+    justify-content: space-around;
+    border-radius: 2rem;
+    background-color: rgb(40, 22, 22);
+}
+
+nav li{
+    display: inline-block;
+    margin-right: 2rem; 
+}
+
+nav a{
+    text-decoration: none;
+    color:white;
+}
+nav a:hover{
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+section{
+    display: flex;
+}
+
+article{
+    flex: 1;
+}
+
+.background{
+    background-image: url("spaghetti.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    color:white;
+    text-align: center;
+    
+}
+
+.column{
+    display: inline-block;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    background-color:grey;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    
+    margin-bottom: 1rem;
+}
+
+section .column a{
+    color:rgb(35, 52, 8);
+    text-decoration:solid dotted;
+    font-size: large;
+}
+   
+section .column img.minipic {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0; 
+}
+
+
+
+section .column a:hover {
+    color: #007BFF; 
+    text-decoration: underline; 
+}
+
+hr{
+    height: 0.2rem;
+    background-color:black;
+    margin: 20px 0;
+}
+
+
+footer{
+    display: flex;
+}
+
+footer div{
+    flex: 1;
+}
+
+hr + p{
+    text-align: end; 
+    margin: 0; 
+    padding:0;
+}
+
