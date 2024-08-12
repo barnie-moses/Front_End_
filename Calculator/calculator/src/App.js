@@ -8,25 +8,34 @@ function App() {
   const inputRef = useRef(null); 
   const resultRef = useRef(null); 
   const [result, setResult] = useState(0); 
+  const [history, setHistory] = useState('');
+
+  function addToHistory(addStr){
+    setHistory((history) => history += ' ' + addStr + ' ' + Number(inputRef.current.value));
+  };
  
   function plus(e) { 
     e.preventDefault(); 
     setResult((result) => result + Number(inputRef.current.value)); 
+    addToHistory('+');
   }; 
  
   function minus(e) { 
     e.preventDefault();
     setResult((result)=> result - Number(inputRef.current.value)); 
+    addToHistory("-");
   };
  
   function times(e) {
     e.preventDefault();
     setResult((result) => result * Number(inputRef.current.value));
+    addToHistory('x');
   }; 
  
   function divide(e) {
     e.preventDefault();
     setResult((result) => result / Number(inputRef.current.value));
+  addToHistory('÷');
   };
  
   function resetInput(e) { 
@@ -41,6 +50,7 @@ function App() {
   	// Add the code for the resetResult function 
     e.preventDefault();
     setResult(0);
+    setHistory('');
   }; 
  
   return ( 
@@ -49,6 +59,7 @@ function App() {
         <h1>Simplest Working Calculator</h1> 
       </div> 
       <form> 
+        <p>0 {history}</p>
         <p ref={resultRef}> 
           {result} 
         </p> 
