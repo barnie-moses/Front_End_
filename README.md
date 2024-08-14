@@ -1,2 +1,2 @@
-# Front_End_Journey
-Files directory: css practise based on coursera portfolio
+# Front_End_
+## **My Frontend Journey**
